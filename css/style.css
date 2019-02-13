@@ -2,6 +2,7 @@ body
 {
     background: radial-gradient(circle, #FC4A1A 60%, #F7B733 50%);
 }
+
 .nav
 {
     list-style:none;
@@ -9,18 +10,27 @@ body
     padding:0;
     text-align:center;
     font-family: 'Space Mono', monospace;
-    font-size: 30px;
+    font-size: 25px;
     height:30px;
 }
+
 .nav li
 {
     display:inline;
     text-decoration: none;
 }
+
 .nav li:hover
 {
     background-color: #11ddbf;
+    
 }
+
+/* .nav li a:hover
+{
+ color: #FC4A1A;   
+} */
+
 .nav a
 {
     display:inline-block;
@@ -28,48 +38,37 @@ body
     color: white;
     text-decoration: none;
 }
-table, th, td
-{
-    border: 1px solid black;
-    border-collapse: collapse;
-    color: #4abdac;
-}
-h1
-{
-    color: white;
+
+.website-title {
+    color: #FC4A1A;
     font-family: 'Space Mono', monospace;
     font-size: 70px;
     height:70px;
     text-align: center;
 }
-h2
-{
-    color: white ;
-    font-family: 'Space Mono', monospace;
-    font-size: 30px;
-    height:30px;
-    text-align: center;
-}
-h3
-{
+
+.song-title {
     color: white;
     font-family: 'Space Mono', monospace;
     font-size: 22px;
     height: 25px;
     text-align: center;
 }
+
 p
 {
     color: white;
     font-family: 'Space Mono', monospace;
-    font-size: 14px;
+    font-size: 15px;
     height: 14px;
     text-align: center;
 }
+
 .color
 {
     color: #FC4A1A;
 }
+
 iframe
 {
     display: block;
