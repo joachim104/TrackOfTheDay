@@ -3,100 +3,85 @@
 
 <head>
     <title>Track Of The Day</title>
-
     <link rel="stylesheet" href="./css/style.css">
-
-    <link rel="icon" href="https://yt3.ggpht.com/FDaq8KXRu4K5nDsDY9jaCMLYmZjtHaKJn46pbYa4RDpP8HNhIJqTsgX0pdDwew7cqmeiW8Dh-6S_RmZmnzA=s900-mo-c-c0xffffffff-rj-k-no">
-
-    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet"/>
+    <link rel="icon" href="https://www.colorcombos.com/images/colors/FC4A1A.png">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
+    <div class="container">
 
-    <p>Frank Ocean <span class ="color">Sinjin Hawke</span> Kaytranada
-        <span class ="color">Disclosure</span> Promnite <span class ="color">Drake</span> ZHU
-        <span class ="color">Musiq Soulchild</span> Sonder <span class ="color">Halsey</span>
-        <span class ="color">Sinjin Hawke</span> Jeremih <span class ="color">Medasin</span> Cashmere Cat
-        <span class ="color">Lido</span> Mura Masa <span class ="color">Jorja Smith</span> Calvin Harris
-        <span class ="color">Future</span> The Weeknd <span class ="color"> Shlohmo</span> Tory Lanez
-        <span class ="color">Hudson Mohawke</span> Travis Scott <span class ="color"> Rustie</span> Justice
-        <span class ="color">Young Thug</span> Karma Kid <span class ="color"> Avelino</span> J HUS
-        <span class ="color">Lil Kleine</span> Jamie xx <span class ="color">Majid Jordan</span> Sampha
-        <span class ="color"></span> Mount Kimbie <span class ="color">Kenton Slash Demon</span> Ruby Empress
-    </p>
+        <h1 class="website-title"> Track Of The Day</h1>
 
-    <br/>
+        <ul class="navbar">
+            <li><a class="cool-link" href="/pop/">Pop</a></li>
+            <li><a  class="cool-link" href="/disco-funk/">Funk & Disco</a></li>
+            <li><a  class="cool-link" href="/hip-hop/">Hip Hop</a></li>
+            <li><a  class="cool-link" href="/house/">House</a></li>
+            <li><a   class="cool-link" href="/other/">Other</a></li>
+        </ul>
 
-    <h1 class="website-title"> Track Of The Day</h1>
+        <p id="countdown"></p>
 
+    </div>
 
-    <ul class="nav">
-        <li><a href="/pop/">Pop</a></li>
-        <li><a href="/disco-funk/">Funk & Disco</a></li>
-        <li><a href="/hip-hop/">Hip Hop</a></li>
-        <li><a href="/house/">House</a></li>
-        <li><a href="/other/">Other Good Music</a></li>
-    </ul>
-    
-    <br/>
-    <br/>
+    <script>
+        let songArray = [
+            {
+                "url": "https://www.youtube.com/embed/4r-XWYs4rBY",
+                "title": "Meek Mill - Championships"
+            },
+            {
+                "url": "https://www.youtube.com/embed/6aH8E-BGx40",
+                "title": "Benny Blanco - More/Diamond Ring feat. Ty Dolla Sign & 6LACK"
+            },
+            {
+                "url": "https://www.youtube.com/embed/0MVhn161PTU",
+                "title": "Ed Sheeran - Thinking Out Loud (Mura Masa Remix)"
+            },
+            {
+                "url": "https://www.youtube.com/embed/jsRJPJrOnVo",
+                "title": "Jimmy Napes - Give It Up"
+            }
+        ];
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/6aH8E-BGx40" frameborder="0"></iframe>
-    <h3 class="song-title">Benny Blanco - More/Diamond Ring feat. Ty Dolla Sign & 6LACK</h3>
+        let counter = 0;
 
-    <br/>
-    <br/>
-    <br/>
-    <br/>
+        $(document).ready(function () {
+            songArray.forEach(song => {
+                $(".container").append('<iframe class="video" id="' + counter + '" width="560" height="315' +
+                    song.url + ' frameborder="0"></iframe>');
+                $('#' + counter).prop('src', song.url);
+                $(".container").append('<h3 class="song-title">' + song.title + '</h3>');
+                counter++;
+            });
+        });
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/0MVhn161PTU" frameborder="0"></iframe>
-    <h3 class="song-title">Ed Sheeran - Thinking Out Loud (Mura Masa Remix)</h3>
-
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/76O3w4pt0CA" frameborder="0"></iframe>
-    <h3 class="song-title"> Miguel - Sky Walker ft. Travis Scott</h3>
-
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/XKQNJzquduI" frameborder="0"></iframe>
-    <h3 class="song-title"> Frank Ocean - Provider</h3>
-
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/oCWpw3k6SFA" frameborder="0"></iframe>
-    <h3 class="song-title"> Drake - Fall For Your Type</h3>
-
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/jsRJPJrOnVo" frameborder="0"></iframe>
-    <h3 class="song-title"> Jimmy Napes - Give It Up</h3>
-
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/im9UzhOxVlI" frameborder="0"></iframe>
-    <h3 class="song-title"> Spooky Black - Reason</h3>
-
-    <br/>
-    <br/>
-    <br/>
-    <br/>
+        // Set the date we're counting down to
+        var countDownDate = new Date("February 14, 2019 20:00:00").getTime();
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+            // Get todays date and time
+            var now = new Date().getTime();
+            // Find the distance between now an the count down date
+            var distance = countDownDate - now;
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Display the result in an element with id="demo"
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+            // If the count down is finished, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
 
 </body>
+
 </html>
